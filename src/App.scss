@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+}
+img {
+  max-width: 100%;
+}
+
+$bg-color: #F1ECE6;
+@mixin flex-centred($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+header {
+  @include flex-centred(none);
+  background: $bg-color;
+  padding: 1.25rem 0;
+
+}
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+} 
+
+
+form {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  input {
+    @include flex-centred(none);
+    border-radius: 3.125rem 0 0 3.125rem;
+    border: none;
+    width: 60rem;
+    background: $bg-color;
+    padding: 0.94rem 2rem;
+    height: 5rem;
+    font-size: 2rem;
+    &::placeholder {
+      font-size: 2rem;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    border: none;
+    background: rgba(118, 183, 205, 1);
+    padding: 0.7rem;
+    font-size: 2rem;
+    height: 4.8rem;
+    width: 8.75rem;
+    color: white;
+    border-radius: 0 3.125rem 3.125rem 0;
+  }
+}
+.todos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: $bg-color;
+  padding: 1.25rem 2.81rem;
+  border-radius: 3.125rem;
+  margin: 3rem 0;
+  button {
+    border: none;
+    background: inherit;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .clean {
+    margin-top: 4rem;
+  }
+}
+.todo-items {
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  white-space: wrap;
+}
+.todo-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  button {
+    border: none;
+    background: inherit;
+  }
+  .todos-text {
+    width: 40rem;
+  }
+}
+
+hr {
+  background: rgba(118, 183, 205, 1);
+  height: 0.1rem;
+}
+
+@media (max-width: 1100px) {
+  html {
+    font-size: 90%;
+  }
+  .container {
+    max-width: 80%;
+  }
+}
+@media (max-width: 950px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (max-width: 825px) {
+  html {
+    font-size: 80%;
+  }
+  .container {
+    max-width: 85%;
+  }
+}
+@media (max-width: 750px) {
+  html {
+    font-size: 60%;
+  }
+  .container {
+    max-width: 90%;
+  }
+  img, .clean {
+    max-width: 70%;
+  }
+}
+@media (max-width: 530px) {
+  html {
+    font-size: 50%;
+  }
+  .logo {
+    width: 15rem;
+  }
+
+}
+@media (max-width: 470px) {
+  html {
+    font-size: 40%;
+  }
+
+}
+@media (max-width: 370px) {
+  html {
+    font-size: 30%;
+  }
+
+}
+@media (max-width: 280px) {
+  html {
+    font-size: 20%;
+  }
+
+}
